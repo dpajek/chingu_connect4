@@ -1,5 +1,72 @@
-.App {
-  text-align: center;
+.status {
+  margin: 10vh 0vh 5vh 0vh;
+}
+
+.board {
+  background-color: #2541dd;
+  border-top-left-radius: 8vh;
+  border-top-right-radius: 8vh;
+  padding: 3vh 3vh 6vh 3vh;
+  display: inline-grid;
+  grid-template-columns: repeat(7, 13vh);
+}
+
+.disc-blue {
+  background-image: linear-gradient(#0a26c4, #3d51c7);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100pc;
+  height: 7vh;
+  width: 7vh;
+  margin: 3vh 3vh 0vh 3vh;
+}
+
+.disc-white {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100pc;
+  height: 6vh;
+  width: 6vh;
+  margin-top: 0.4vh;
+}
+
+.disc-border-R {
+  background-image: linear-gradient(rgb(250, 100, 100), red);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100pc;
+  height: 6vh;
+  width: 6vh;
+  margin-top: 0.4vh;
+}
+
+.disc-middle-R {
+  background-image: linear-gradient(red, rgb(250, 100, 100));
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100pc;
+  height: 5vh;
+  width: 5vh;
+  margin-top: 0.4vh;
+}
+
+.disc-border-Y {
+  background-image: linear-gradient(rgb(255, 255, 150), yellow);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100pc;
+  height: 6vh;
+  width: 6vh;
+  margin-top: 0.4vh;
+}
+
+.disc-middle-Y {
+  background-image: linear-gradient(yellow, rgb(255, 255, 150));
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 100pc;
+  height: 5vh;
+  width: 5vh;
+  margin-top: 0.4vh;
+}
+
+.reset-button {
+  margin: 3vh 0vh 0vh 0vh;
 }
 
 .App-logo {
