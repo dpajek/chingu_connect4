@@ -7,7 +7,7 @@ class Board extends React.Component {
   renderDisc(i) {
     const { gameGrid, onClick } = this.props;
 
-    return <Disc colour={gameGrid[i]} onClick={() => onClick(i)} />;
+    return <Disc key={i} colour={gameGrid[i]} onClick={() => onClick(i)} />;
   }
 
   render() {

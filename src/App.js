@@ -2,6 +2,7 @@
 import React from 'react';
 import './App.css';
 import Board from './Board';
+import './Disc.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -16,12 +17,13 @@ class App extends React.Component {
     if (this.determineWinner() !== null) return;
 
     const { gameGrid, p1IsNext } = this.state;
-    const newGameGrid = gameGrid.slice();
+    if (gameGrid.toString().length > 82) return;
 
     const discIndex = this.findOpenSpace(i);
 
     if (discIndex < 0) return;
 
+    const newGameGrid = gameGrid.slice();
     newGameGrid[discIndex] = p1IsNext ? 'R' : 'Y';
 
     this.setState({
@@ -107,11 +109,16 @@ class App extends React.Component {
 
   render() {
     const { gameGrid, p1IsNext } = this.state;
+    const tied = gameGrid.toString().length > 82;
 
     return (
       <center>
         <div className="App">
-          <StatusDisplay p1IsNext={p1IsNext} winner={this.determineWinner()} />
+          <StatusDisplay
+            p1IsNext={p1IsNext}
+            winner={this.determineWinner()}
+            tied={tied}
+          />
           <Board
             gameGrid={gameGrid}
             onClick={(i) => this.handleClick(i)}
@@ -124,7 +131,7 @@ class App extends React.Component {
 }
 
 function StatusDisplay(props) {
-  const { p1IsNext, winner } = props;
+  const { p1IsNext, winner, tied } = props;
   let statusMessage;
   let statusColour;
   let spinningDisc = (
@@ -134,7 +141,10 @@ function StatusDisplay(props) {
     </div>
   );
 
-  if (winner === null) {
+  if (tied) {
+    statusMessage = 'Tie game!';
+    statusColour = 'status-T';
+  } else if (winner === null) {
     statusMessage = `${p1IsNext ? 'Player 1' : 'Player 2'}, select a coin spot`;
     statusColour = p1IsNext ? 'status-R' : 'status-Y';
   } else {
