@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6f856a6828a881d85ec5b6ba4a68431d",
+    "revision": "26ecc345738aec228ccf9aedd411da40",
     "url": "/chingu_connect4/index.html"
   },
   {
