@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chingu_connect4/static/css/main.0b6abd0f.chunk.css",
+    "main.js": "/chingu_connect4/static/js/main.bf144697.chunk.js",
+    "main.js.map": "/chingu_connect4/static/js/main.bf144697.chunk.js.map",
+    "runtime-main.js": "/chingu_connect4/static/js/runtime-main.87ae93bd.js",
+    "runtime-main.js.map": "/chingu_connect4/static/js/runtime-main.87ae93bd.js.map",
+    "static/js/2.ac1b2116.chunk.js": "/chingu_connect4/static/js/2.ac1b2116.chunk.js",
+    "static/js/2.ac1b2116.chunk.js.map": "/chingu_connect4/static/js/2.ac1b2116.chunk.js.map",
+    "index.html": "/chingu_connect4/index.html",
+    "precache-manifest.cbe7f9beb019595f74c6e978300de358.js": "/chingu_connect4/precache-manifest.cbe7f9beb019595f74c6e978300de358.js",
+    "service-worker.js": "/chingu_connect4/service-worker.js",
+    "static/css/main.0b6abd0f.chunk.css.map": "/chingu_connect4/static/css/main.0b6abd0f.chunk.css.map",
+    "static/js/2.ac1b2116.chunk.js.LICENSE.txt": "/chingu_connect4/static/js/2.ac1b2116.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.87ae93bd.js",
+    "static/js/2.ac1b2116.chunk.js",
+    "static/css/main.0b6abd0f.chunk.css",
+    "static/js/main.bf144697.chunk.js"
+  ]
+}
