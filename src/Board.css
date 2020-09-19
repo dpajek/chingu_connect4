@@ -1,0 +1,22 @@
+.board {
+  background-color: #2541dd;
+  border-top-left-radius: 8vh;
+  border-top-right-radius: 8vh;
+  padding: 3vh 3vh 6vh 3vh;
+  display: inline-grid;
+  grid-template-columns: repeat(7, 13vh);
+}
+
+.reset-button {
+  margin: 2vh 0vh 2vh 0vh;
+  padding: 0.5vh 2vh 0.5vh 2vh;
+  background-color: lightblue;
+  border-radius: 100pc;
+  font-size: 2vh;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reset-button:focus {
+  outline: none;
+}

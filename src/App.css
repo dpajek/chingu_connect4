@@ -1,83 +1,53 @@
-.status {
-  margin: 10vh 0vh 5vh 0vh;
-}
-
-.board {
-  background-color: #2541dd;
-  border-top-left-radius: 8vh;
-  border-top-right-radius: 8vh;
-  padding: 3vh 3vh 6vh 3vh;
-  display: inline-grid;
-  grid-template-columns: repeat(7, 13vh);
-}
-
-.disc-blue {
-  background-image: linear-gradient(#0a26c4, #3d51c7);
-  border: 1px solid rgb(0, 0, 0);
+.status-R {
+  margin: 2vh 0vh 4vh 0vh;
+  padding: 1.5vh 2vh 1.5vh 2vh;
+  width: 60vh;
+  background-image: linear-gradient(to right, red, rgb(250, 100, 100));
   border-radius: 100pc;
-  height: 7vh;
-  width: 7vh;
-  margin: 3vh 3vh 0vh 3vh;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.disc-white {
-  background: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
+.status-Y {
+  margin: 2vh 0vh 4vh 0vh;
+  padding: 1.5vh 2vh 1.5vh 2vh;
+  width: 60vh;
+  background-image: linear-gradient(to right, rgb(255, 255, 150), yellow);
   border-radius: 100pc;
-  height: 6vh;
-  width: 6vh;
-  margin-top: 0.4vh;
+  font-size: 3vh;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.disc-border-R {
-  background-image: linear-gradient(rgb(250, 100, 100), red);
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 100pc;
-  height: 6vh;
-  width: 6vh;
-  margin-top: 0.4vh;
-}
-
-.disc-middle-R {
-  background-image: linear-gradient(red, rgb(250, 100, 100));
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 100pc;
-  height: 5vh;
-  width: 5vh;
-  margin-top: 0.4vh;
-}
-
-.disc-border-Y {
-  background-image: linear-gradient(rgb(255, 255, 150), yellow);
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 100pc;
-  height: 6vh;
-  width: 6vh;
-  margin-top: 0.4vh;
-}
-
-.disc-middle-Y {
-  background-image: linear-gradient(yellow, rgb(255, 255, 150));
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 100pc;
-  height: 5vh;
-  width: 5vh;
-  margin-top: 0.4vh;
-}
-
-.reset-button {
-  margin: 3vh 0vh 0vh 0vh;
-}
-
-.App-logo {
-  height: 40vmin;
+.spinning-disc {
   pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .spinning-disc {
+    animation: disc-spin infinite 5s linear;
   }
+}
+
+/* all other browsers */
+@keyframes disc-spin {
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform: rotateY(-360deg);
+    transform: rotateY(-360deg);
+  }
+}
+
+/* WebKit and Opera browsers */
+@-webkit-keyframes disc-spin {
+  from { -webkit-transform: rotateY(0deg);    }
+  to   { -webkit-transform: rotateY(-360deg); }
 }
 
 .App-header {
@@ -93,13 +63,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
